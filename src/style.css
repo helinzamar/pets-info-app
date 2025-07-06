@@ -1,15 +1,28 @@
-body {
-  font-family: 'Segoe UI', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #fdfdfd;
-  text-align: center;
+/* === Baslayout === */
+* {
+  box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fffdf8;
+  color: #222;
+}
+
+/* Wrapper för hela sidan */
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* === Header === */
 header {
   background-color: #ffcc70;
-  padding: 1.5rem;
+  padding: 1.5rem 1rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 header h1 {
@@ -17,46 +30,124 @@ header h1 {
   font-size: 2rem;
 }
 
+/* === Main layout === */
 main {
-  padding: 2rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 2rem;
+  padding: 3rem 1rem 1rem;
+  flex: 1;
 }
 
-.section h2 {
-  margin-bottom: 1rem;
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
 }
 
+.emoji {
+  font-size: 3rem;
+}
+
+.middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.middle-text {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #000 !important;
+  text-align: center;
+  margin: 0;
+}
+
+/* === Knapp === */
 button {
   padding: 1rem 2rem;
   font-size: 1.1rem;
-  background-color: #3399ff;
+  background-color: #e2a83d;
   color: white;
   border: none;
   border-radius: 12px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
 button:hover {
-  background-color: #007acc;
+  background-color: #cc8c1a;
+  transform: scale(1.05);
 }
 
-footer {
+.bottom-message {
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
   margin-top: 2rem;
+  color: #090909;
+  font-style: italic;
+}
+
+/* === Tassar längst ner === */
+.bottom-decoration {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #444;
+  margin-top: 3rem;
+  opacity: 0.7;
+}
+
+/* === Footer === */
+footer {
   padding: 1rem;
   background-color: #eee;
+  text-align: center;
   font-size: 0.9rem;
 }
 
+/* === Tablet (768px–1023px) === */
 @media (min-width: 768px) {
   main {
+    padding: 4rem 2rem 2rem;
+    gap: 2.5rem;
+  }
+
+  .middle-text {
+    font-size: 1.6rem;
+  }
+
+  button {
+    font-size: 1.15rem;
+  }
+}
+
+/* === Desktop (1024px+) === */
+@media (min-width: 1024px) {
+  main {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    padding: 5rem 4rem 3rem;
   }
 
   .section {
-    width: 40%;
+    width: 200px;
+  }
+
+  .middle {
+    width: 250px;
+  }
+
+  .middle-text {
+    font-size: 1.8rem;
+  }
+
+  .bottom-decoration {
+    margin-top: 4rem;
   }
 }
