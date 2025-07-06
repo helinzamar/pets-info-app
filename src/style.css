@@ -116,6 +116,7 @@ button:hover {
   padding: 2rem;
 }
 
+
 .animal-card {
   margin-top: 2rem;
   background: #fff6e0;
@@ -127,28 +128,51 @@ button:hover {
   margin-right: auto;
 }
 
-.animal-img {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 12px;
-  margin-bottom: 1rem;
-}
-.cat-wrapper {
+.cat-wrapper, .dog-wrapper {
   position: relative;
   display: flex;
-  align-items: center;
   justify-content: center;
-  margin-top: 2rem;
-  gap: 1.5rem;
+  align-items: center;
 }
 
 .animal-card {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 2rem;
+  border-radius: 16px;
+  background-color: #fef0c7;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 350px;
+  width: 100%;
 }
+
+.arrow-btn {
+  position: absolute;
+  top: 100px; /* Justera för att ligga i höjd med bilden */
+  width: 36px;
+  height: 36px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 50%;
+  background-color: #fff3d1;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.arrow-btn:hover {
+  transform: scale(1.1);
+  background-color: #ffdb8f;
+}
+
+.left-arrow {
+  left: -18px; /* Lägg nära vänstra kanten av kortet */
+}
+
+.right-arrow {
+  right: -18px;
+}
+
 
 .arrow-btn.inside {
   position: absolute;
@@ -208,6 +232,54 @@ button:hover {
   transform: scale(1.15);
 }
 
+.animal-viewer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.animal-card {
+  background-color: #fef2d0;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  overflow: visible; /* Gör att pilar kan synas utanför */
+}
+.animal-img {
+  width: 100%;
+  height: 220px;            /* Fast höjd */
+  object-fit: cover;        /* Beskär så att hela kortet fylls snyggt */
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.arrow-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  padding: 0.4rem 0.6rem;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+.left-arrow {
+  left: 0.3rem;
+}
+
+.right-arrow {
+  right: 0.3rem;
+}
 
 /* === Footer === */
 footer {
@@ -216,6 +288,8 @@ footer {
   text-align: center;
   font-size: 0.9rem;
 }
+
+
 
 /* === Tablet (768px–1023px) === */
 @media (min-width: 768px) {
@@ -259,3 +333,4 @@ footer {
     margin-top: 4rem;
   }
 }
+
