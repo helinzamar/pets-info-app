@@ -364,47 +364,95 @@ footer {
   border-radius: 8px;
   cursor: pointer;
 }
-
-/* === Tablet (768px–1023px) === */
-@media (min-width: 768px) {
-  main {
-    padding: 4rem 2rem 2rem;
-    gap: 2.5rem;
-  }
-
-  .middle-text {
+/* === MOBIL (≤767px) === */
+@media (max-width: 767px) {
+  .animal-page h1 {
+    position: static;
+    text-align: center;
+    margin-bottom: 1rem;
     font-size: 1.6rem;
   }
 
-  button {
-    font-size: 1.15rem;
+  .favorites-link {
+    position: static;
+    display: block;
+    margin: 0 auto 1rem;
+    text-align: center;
+  }
+
+  .animal-card {
+    max-width: 90%;
+    padding: 1rem;
+  }
+
+  .arrow-btn {
+    top: 45%;
+    font-size: 1.4rem;
+    width: 40px;
+    height: 40px;
+  }
+
+  .left-arrow {
+    left: -10px;
+  }
+
+  .right-arrow {
+    right: -10px;
+  }
+
+  .favorites-grid {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .favorite-item img {
+    width: 100%;
+    height: auto;
+  }
+
+  .back-btn {
+    position: static;
+    margin: 1rem 0;
+    display: block;
   }
 }
 
-/* === Desktop (1024px+) === */
-@media (min-width: 1024px) {
-  main {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 4rem;
-    padding: 5rem 4rem 3rem;
-  }
-
-  .section {
-    width: 200px;
-  }
-
-  .middle {
-    width: 250px;
-  }
-
-  .middle-text {
+/* === TABLET (768px–1023px) === */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .animal-page h1 {
+    position: static;
+    text-align: left;
+    margin: 0 0 1rem 1rem;
     font-size: 1.8rem;
   }
 
-  .bottom-decoration {
-    margin-top: 4rem;
+  .favorites-link {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .animal-card {
+    max-width: 400px;
+    padding: 1.5rem;
+  }
+
+  .arrow-btn {
+    top: 50%;
+    font-size: 1.6rem;
+  }
+
+  .left-arrow {
+    left: -12px;
+  }
+
+  .right-arrow {
+    right: -12px;
+  }
+
+  .favorites-grid {
+    gap: 1rem;
+    padding: 1.5rem;
   }
 }
-
