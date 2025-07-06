@@ -50,32 +50,41 @@ main {
 .emoji {
   font-size: 3rem;
 }
-
 .middle {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  padding-top: 1rem; /* 🔽 Justerar placering nedåt */
 }
 
 .middle-text {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  color: #000 !important;
+  color: #000;
   text-align: center;
   margin: 0;
+  padding-top: 1.5rem; /* 🔽 Flyttar texten lite längre ner */
+}
+
+.middle p {
+  color: rgb(14, 14, 14);
+  font-style: italic;
 }
 
 /* === Knapp === */
 button {
   padding: 1rem 2rem;
   font-size: 1.1rem;
-  background-color: #e2a83d;
-  color: white;
+  background-color: #f0c067;
+  color: rgb(15, 15, 15);
   border: none;
   border-radius: 12px;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  width: 200px; /* eller prova 220px beroende på hur bred du vill ha dem */
+  text-align: center;
+  white-space: nowrap;
+  transition: background 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 button:hover {
@@ -83,6 +92,7 @@ button:hover {
   transform: scale(1.05);
 }
 
+/* === Informativ text ovanför huvudinnehåll === */
 .bottom-message {
   width: 100%;
   text-align: center;
