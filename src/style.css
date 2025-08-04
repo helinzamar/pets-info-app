@@ -55,7 +55,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 1rem; /* 🔽 Justerar placering nedåt */
+  padding-top: 1rem; 
 }
 
 .middle-text {
@@ -64,7 +64,7 @@ main {
   color: #000;
   text-align: center;
   margin: 0;
-  padding-top: 1.5rem; /* 🔽 Flyttar texten lite längre ner */
+  padding-top: 1.5rem; 
 }
 
 .middle p {
@@ -81,7 +81,7 @@ button {
   border: none;
   border-radius: 12px;
   cursor: pointer;
-  width: 200px; /* eller prova 220px beroende på hur bred du vill ha dem */
+  width: 200px; 
   text-align: center;
   white-space: nowrap;
   transition: background 0.3s ease;
@@ -93,7 +93,7 @@ button:hover {
   transform: scale(1.05);
 }
 
-/* === Informativ text ovanför huvudinnehåll === */
+
 .bottom-message {
   width: 100%;
   text-align: center;
@@ -103,7 +103,7 @@ button:hover {
   font-style: italic;
 }
 
-/* === Tassar längst ner === */
+
 .bottom-decoration {
   text-align: center;
   font-size: 1.5rem;
@@ -176,7 +176,7 @@ button:hover {
 
 .arrow-btn {
   position: absolute;
-  top: calc(1rem + 110px); /* ⬅️ Justera detta vid behov för att matcha bildens vertikala mitt */
+  top: calc(1rem + 110px); 
   transform: translateY(-50%);
   background-color: #fcd67e;
   border: none;
@@ -190,7 +190,7 @@ button:hover {
   transition: background 0.3s ease;
 }
 
-/* Justera pilar i hundkort */
+
 .arrow-btn {
   top: 55% !important; 
 }
@@ -226,13 +226,13 @@ button:hover {
   width: 100%;
   text-align: center;
   position: relative;
-  overflow: visible; /* Gör att pilar kan synas utanför */
+  overflow: visible; 
 }
 
 .animal-img {
   width: 100%;
-  height: 220px;            /* Fast höjd */
-  object-fit: cover;        /* Beskär så att hela kortet fylls snyggt */
+  height: 220px;            
+  object-fit: cover;        
   border-radius: 0.5rem;
   margin-bottom: 1rem;
 }
