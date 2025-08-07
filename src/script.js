@@ -23,7 +23,7 @@ dogBtn.addEventListener('click', async () => {
     const fact = res.data.data[0]?.attributes?.body;
     Swal.fire({
       title: 'Hundfakta 🐶',
-      text: fact || 'Ingen fakta hittades',
+      text: fact || 'Inget fakta hittades',
       icon: 'info',
     });
   } catch (error) {
